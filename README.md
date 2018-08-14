@@ -93,13 +93,19 @@ A database will then need to be sent Heroku.
 ?>
 ```
 
-
+Information here tells you the following: user:password@name-of-machine/schema?reconnect=true
 
 ```
 heroku config | grep CLEARDB_DATABASE_URL
 >>> CLEARDB_DATABASE_URL: mysql://b13525e9dcde9c:71459c8d@us-cdbr-iron-east-01.cleardb.net/heroku_c5eb04791d8ad92?reconnect=true
+```
 
-mysql -u b13525e9dcde9c -h us-cdbr-iron-east-01.cleardb.net -p heroku_c5eb04791d8ad92 < ./creat_Database_content.sql
+Download MySQL's workbench and insert the username, password, machine name and schemea in. Once added, access into the database.
+
+Altertively, the following steps can be taken from Git Bash to access the database and insert information in.
+
+```
+mysql -u b13525e9dcde9c -h us-cdbr-iron-east-01.cleardb.net -p heroku_c5eb04791d8ad92 < ~/Downloads/genremaker.sql
 >>> Enter password: 
 ```
 
